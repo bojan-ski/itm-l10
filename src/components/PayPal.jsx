@@ -1,14 +1,13 @@
-import { useContext } from 'react'
-import { AmountContext, CurrencyContext } from '../App'
+import { useGlobalContext } from '../context'
 
 const PayPal = () => {
-    const currency = useContext(CurrencyContext)
-    const amount = useContext(AmountContext)
-    // console.log(currency);
-    // console.log(amount);
+    const { setEnteredAmount } = useGlobalContext()
 
     return (
-        <div>PayPal</div>
+        <div className='paypal'>
+            <label >Please enter the amount in SRB DINAR:</label>
+            <input type="number" onInput={(e) => setEnteredAmount(e.target.value)} required/>           
+        </div>
     )
 }
 

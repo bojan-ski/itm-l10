@@ -1,8 +1,12 @@
+import CurrencyType from './CurrencyType'
 import PayPal from './PayPal'
 
 const Payment = () => {
     return (
-        <PayPal />
+        <section className='payment'>
+            <PayPal />           
+            <CurrencyType/>
+        </section>
     )
 }
 
