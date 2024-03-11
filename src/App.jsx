@@ -1,12 +1,17 @@
+import { createContext } from "react"
 import Payment from "./components/Payment"
 
-function App() {
+export const CurrencyContext = createContext("USD")
+// console.log(CurrencyContext);
 
+function App() {
   return (
-    <>
-      <div className="container">
-        <Payment/>
-      </div>
+    <> 
+      <CurrencyContext.Provider>
+        <div className="container">
+          <Payment />
+        </div>
+      </CurrencyContext.Provider>
     </>
   )
 }
