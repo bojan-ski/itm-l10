@@ -1,9 +1,12 @@
+import Payment from "./components/Payment"
 
 function App() {
 
   return (
     <>
-      <h1>Hello World</h1>
+      <div className="container">
+        <Payment/>
+      </div>
     </>
   )
 }
